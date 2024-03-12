@@ -16,6 +16,32 @@
     <project.reporting.outputEncoding>utf-8</project.reporting.outputEncoding>
   </properties>
 
+  <repositories>
+    <repository>
+      <id>local-release</id>
+      <name>Artifactory Release Repository</name>
+      <url>http://192.168.106.144:8082/artifactory/libs-release-local</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+
+    <repository>
+      <id>snapshots-local</id>
+      <name>Artifactory Snapshot Repository</name>
+      <url>http://192.168.106.144:8082/artifactory/libs-snapshot-local</url>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+
   <distributionManagement>
     <repository>
       <id>local-release</id>
