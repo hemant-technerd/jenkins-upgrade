@@ -80,7 +80,16 @@
                     </manifest>  
                 </archive>  
             </configuration>  
-        </plugin> 
+        </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <version>2.7</version>
+        <configuration>
+          <skip>false</skip> <!-- Make sure this is false or remove it if you want to deploy -->
+        </configuration>
+      </plugin>
 
       <plugin>
         <artifactId>maven-release-plugin</artifactId>
