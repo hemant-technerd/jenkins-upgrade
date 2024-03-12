@@ -171,7 +171,7 @@
       <plugin>
         <groupId>org.jfrog.buildinfo</groupId>
         <artifactId>artifactory-maven-plugin</artifactId>
-        <version>3.6.1</version> <!-- Use the latest version available -->
+        <version>3.6.1</version>
         <executions>
           <execution>
             <id>build-info</id>
@@ -183,16 +183,15 @@
                 <contextUrl>http://192.168.106.144:8082</contextUrl>
                 <username>admin</username>
                 <password>Password123</password>
+                <repoKey>libs-release-local</repoKey>
+                <snapshotRepoKey>libs-snapshot-local</snapshotRepoKey>
                 <publishArtifacts>true</publishArtifacts>
                 <publishBuildInfo>true</publishBuildInfo>
               </publisher>
-              <buildInfo>
-              </buildInfo>
             </configuration>
           </execution>
         </executions>
       </plugin>
-
     </plugins>
   </build>
 
