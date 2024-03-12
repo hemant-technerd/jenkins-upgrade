@@ -156,12 +156,10 @@
           </reportPlugins>
         </configuration>
       </plugin>
-
       <plugin>
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.0.0-M7</version>
       </plugin>
-
       <plugin>
         <groupId>org.mortbay.jetty</groupId>
         <artifactId>jetty-maven-plugin</artifactId>
@@ -183,8 +181,8 @@
                 <contextUrl>http://192.168.106.144:8082</contextUrl>
                 <username>admin</username>
                 <password>Password123</password>
-                <repoKey>libs-release-local</repoKey>
-                <snapshotRepoKey>libs-snapshot-local</snapshotRepoKey>
+                <repoKey>local-release</repoKey>
+                <snapshotRepoKey>snapshot-local</snapshotRepoKey>
                 <publishArtifacts>true</publishArtifacts>
                 <publishBuildInfo>true</publishBuildInfo>
               </publisher>
