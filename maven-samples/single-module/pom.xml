@@ -167,6 +167,34 @@
         <artifactId>jetty-maven-plugin</artifactId>
         <version>9.4.46.v20220331</version>
       </plugin>
+
+      <plugin>
+        <groupId>org.jfrog.buildinfo</groupId>
+        <artifactId>artifactory-maven-plugin</artifactId>
+        <version>2.6.1</version> <!-- Use the latest version available -->
+        <executions>
+          <execution>
+            <id>build-info</id>
+            <goals>
+              <goal>publish</goal>
+            </goals>
+            <configuration>
+              <publisher>
+                <contextUrl>http://192.168.106.144:8082/artifactory</contextUrl> <!-- Define artifactory URL -->
+                <username>admin</username> <!-- Define username -->
+                <password>Password123</password> <!-- Define password -->
+                <publishArtifacts>true</publishArtifacts>
+                <publishBuildInfo>true</publishBuildInfo>
+                <!-- Additional configuration -->
+              </publisher>
+              <buildInfo>
+                <!-- Build info configuration -->
+              </buildInfo>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
     </plugins>
   </build>
 
