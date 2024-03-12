@@ -180,7 +180,7 @@
             </goals>
             <configuration>
               <publisher>
-                <contextUrl>http://192.168.106.144:8082/artifactory</contextUrl> <!-- Define artifactory URL -->
+                <contextUrl>http://192.168.106.144:8082</contextUrl> <!-- Define artifactory URL -->
                 <username>admin</username> <!-- Define username -->
                 <password>Password123</password> <!-- Define password -->
                 <publishArtifacts>true</publishArtifacts>
