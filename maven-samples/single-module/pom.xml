@@ -180,15 +180,13 @@
             </goals>
             <configuration>
               <publisher>
-                <contextUrl>http://192.168.106.144:8082</contextUrl> <!-- Define artifactory URL -->
-                <username>admin</username> <!-- Define username -->
-                <password>Password123</password> <!-- Define password -->
+                <contextUrl>http://192.168.106.144:8082</contextUrl>
+                <username>admin</username>
+                <password>Password123</password>
                 <publishArtifacts>true</publishArtifacts>
                 <publishBuildInfo>true</publishBuildInfo>
-                <!-- Additional configuration -->
               </publisher>
               <buildInfo>
-                <!-- Build info configuration -->
               </buildInfo>
             </configuration>
           </execution>
