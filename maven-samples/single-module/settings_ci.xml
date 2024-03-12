@@ -24,14 +24,40 @@
                     <url>http://192.168.106.144:8082/artifactory/libs-release</url>
                 </repository>
                 <repository>
+                    <id>local-release</id>
+                    <name>libs-release-local</name>
+                    <url>http://192.168.106.144:8082/artifactory/libs-release-local</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                        <updatePolicy>always</updatePolicy>
+                    </snapshots>
+                </repository>
+                <repository>
                     <id>snapshots</id>
-                    <name>libs-snapshot</name>
-                    <url>http://192.168.106.144:8082/artifactory/libs-snapshot</url>
+                    <name>libs-snapshot-local</name>
+                    <url>http://192.168.106.144:8082/artifactory/libs-snapshot-local</url>
                     <snapshots>
                         <enabled>true</enabled>
+                        <updatePolicy>always</updatePolicy>
                     </snapshots>
                 </repository>
             </repositories>
+            <distributionManagement>
+                <repository>
+                    <id>local-release</id>
+                    <name>Artifactory Release Repository</name>
+                    <url>http://192.168.106.144:8082/artifactory/libs-release-local</url>
+                </repository>
+                <snapshotRepository>
+                    <id>local-release</id>
+                    <name>Artifactory Snapshot Repository</name>
+                    <url>http://192.168.106.144:8082/artifactory/libs-snapshot-local</url>
+                </snapshotRepository>
+            </distributionManagement>
+
             <pluginRepositories>
                 <pluginRepository>
                     <id>central</id>
